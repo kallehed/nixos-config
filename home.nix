@@ -16,6 +16,9 @@
     fuzzel wl-clipboard libnotify
     brightnessctl google-chrome
 
+    #deving
+    rust-analyzer rustfmt lldb
+
     # for screen recording with "record" alias
     slurp wf-recorder ffmpeg
   ];
