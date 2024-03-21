@@ -6,7 +6,7 @@
   home.homeDirectory = "/home/kalle";
 
   home.packages = with pkgs; [
-    nnn helix
+    nnn 
     # could delete
     helvum
     # look at wayland inputs
@@ -15,12 +15,14 @@
     grimblast waybar xfce.ristretto mpv pavucontrol
     fuzzel wl-clipboard libnotify
     brightnessctl google-chrome
+    # for screen recording with "record" alias
+    slurp wf-recorder ffmpeg 
 
     #deving
-    rust-analyzer rustfmt lldb
+    rust-analyzer rustfmt lldb helix
+    # dev things that shouldn't be here actually but IDC
+    cargo rustc rustfmt
 
-    # for screen recording with "record" alias
-    slurp wf-recorder ffmpeg
   ];
 
   programs.git = {
