@@ -32,3 +32,9 @@ select = "block"
 [editor.indent-guides]
 render = true # add vertical lines for indentation
 
+# change it so d and c don't yank
+[keys.normal]
+A-d = "delete_selection"
+d = "delete_selection_noyank"
+A-c = "change_selection"
+c = "change_selection_noyank"
