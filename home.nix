@@ -18,12 +18,25 @@
     # for screen recording with "record" alias
     slurp wf-recorder ffmpeg 
 
+    # terminal things
+    lsd
+
     #deving
     rust-analyzer rustfmt lldb helix
     # dev things that shouldn't be here actually but IDC
     cargo rustc rustfmt
 
   ];
+
+  programs.lsd = {
+    enable = true;
+    enableAliases = true;
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
   programs.git = {
     enable = true;
@@ -48,13 +61,14 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     history.size = 10000;
     oh-my-zsh.enable = true;
     oh-my-zsh.theme = "intheloop";
     shellAliases = {
       record = "wf-recorder -g \"$(slurp)\" -r 24  -f recording.mp4";
+      cd = "z";
     };
   };
 

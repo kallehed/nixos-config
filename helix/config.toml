@@ -1,4 +1,4 @@
-theme = "gruvbox"
+theme = "flatwhite"
 
 [editor]
 auto-save = true # auto save when lose focus
